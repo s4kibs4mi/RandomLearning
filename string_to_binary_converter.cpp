@@ -14,7 +14,7 @@ string BinConvert(int x){
 		i++;
 	}
 	while(n.length() < 8){
-		n.push_back((x%2)+'0');
+		n.push_back('0');
 	}
 	reverse(n.begin(),n.end());
 	return n;
@@ -26,6 +26,7 @@ int main(){
 	vector <string> :: iterator it;
 	long int i;
 	while(getline(cin , text)){
+		if(text.length()==0) break;
 		i = 0;
 		while(text[i]){
 			bin.push_back(BinConvert(text[i]));
